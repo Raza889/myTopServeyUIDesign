@@ -1,0 +1,61 @@
+@import './typography.scss';
+*,
+*::after,
+*::before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+.MTSContainer{
+    background-color: #f6f5fe;
+    // height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}
+.MTS-logo{
+    height: 47px;
+    // width: 60%;
+}
+.flex-row{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.justify-flex-start{
+    justify-content: flex-start !important;
+}
+.ml-4{
+    margin-left: 4px;
+}
+.mr-4{
+    margin-right: 4px;
+}
+.ml-6{
+    margin-left: 6px;
+}
+.mr-6{
+    margin-right: 6px;
+}
+.alignItemFlex-Start{
+    align-items: flex-start;
+}
+.text-dec-none{
+    &:link,
+    &:visited{
+        text-decoration: none;
+    }
+}
+.height-100{
+    min-height: 100vh;
+}
+.MTS-divider{
+    height: 1px;
+    background-color: rgba($color: #3D3B52, $alpha: .1);
+}

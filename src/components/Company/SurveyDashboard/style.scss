@@ -1,0 +1,134 @@
+@import '../../../commonStyle/variables.scss';
+.MTS-survey-dashboard{
+  &-container{
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  &-status-container{
+    background-color: #E3556F;
+    height: 96px;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+  }
+  &-status-svg{
+    width: 50px;
+  }
+  &-status-button{
+    & button{
+      color: #fff;
+      border-color: rgba(#fff,.4);
+    }
+  }
+  &-status-text{
+    flex: 1;
+  }
+}
+.MTS-sur-dash{
+  &-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    @media only screen and (max-width:768px){
+      flex-wrap: wrap;  
+      padding: 16px;
+    }
+    &-left,
+    &-right{
+      flex:1;
+      @media only screen and (max-width:768px){
+        flex: 0 0 100%;
+        margin-top: 12px;
+      }
+    }
+    &-right{
+      text-align: right;
+    }
+  }
+  &-status{
+    border-radius: 16px;
+    padding: 8px 16px;
+    width: max-content;
+    color: #fff;
+    text-transform: capitalize;
+    &-inactive{
+      background-color: #E3556F;
+    }
+    &-active{
+      background-color: $color-blue-primary;
+    }
+    &-completed{
+      background-color: $color-green-primary;
+    }
+  }
+  &-attr-container{
+    margin: 25px 0;
+    
+  }
+  &-attr-heading{
+    font-size: 14px;
+    line-height: 20px;
+    color: #3D3B52;
+    opacity: 0.5;
+    &-bold{
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  &-stats-row{
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width:768px){
+      flex-wrap: wrap;
+    }
+  }
+  &-attr-val{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    color: #3D3B52;
+    &-normal{
+      font-weight: normal;
+    }
+  }
+  &-button{
+    & button{
+      width: max-content;
+    }
+  }
+  &-question-container{
+    padding: 32px;
+  }
+  &-question-ans-container{
+    margin-top: 8px;
+  }
+  &-ans-box{
+    margin-top: 16px;
+    width: 50%;
+    @media only screen and (max-width:768px){
+      width: 100%;
+    }
+  }
+  &-stat-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  &-attr-stat{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: $color-blue-primary;
+  }
+}
+.MTS-create-survey-button{
+  @media only screen and (max-width:768px){
+    margin-right: 5px;
+  }
+}

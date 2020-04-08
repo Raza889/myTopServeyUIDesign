@@ -1,0 +1,28 @@
+.MTS-progress-container{
+    background-color: rgba(#3D3B52,.1);
+    border-radius: 8px;
+    height: 16px;
+    overflow: hidden;
+    width: 100%;
+    &sm{
+        height: 8px;
+        & .MTS-progress-bar{
+            height: 8px;
+        }
+    }
+}
+.MTS-progress-bar{
+    border-radius: 8px;
+    height: 16px;
+    background-color: #5C51E1;
+    transition: all .5s;
+}
+.MTS-progress-blue{
+    background-color: #5C51E1;
+}
+.MTS-progress-red{
+    background-color: #E3556F;
+}
+.MTS-progress-green{
+    background-color: #59CD96;
+}

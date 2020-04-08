@@ -1,0 +1,114 @@
+@import '../../../commonStyle/variables.scss';
+.MTS-Login{
+    &-container{
+      max-width: 570px;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      @media only screen and (max-width:500px) {
+        position: initial;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px;
+      }
+    }
+    &-cancel{
+      font-size: 16px;
+      color: $color-text;
+      &-text{
+        padding: 24px 0;
+        opacity: 0.7;
+      }
+    }
+    &-data-container{
+        background-color: #fff;
+        margin-top: 40px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    &-header{
+        background-color: $color-blue-primary;
+        color: #fff;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: inherit;
+    }
+    &-field-container{
+        padding: 24px;
+    }
+    &-field-mobile-container{
+      @media (max-width:576px) {
+        min-height: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    &-remember-row{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-button{
+        width: 48%;
+    }
+    &-button-row{
+        display: flex;
+        margin-top: 24px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  
+}
+.MTS{
+  &-Card-header{
+    background-color: $color-blue-primary;
+    color: #fff;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    // margin-top: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+  }
+  &-card-body{
+  background-color: #fff;
+  padding-top: 40px;
+  overflow: hidden;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 40px 16px 16px 16px;
+  }
+  &-Card-container{
+    max-width: 570px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media only screen and (max-width:500px) {
+      position: initial;
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-top: 30px;
+    }
+  }
+  &-Card-Footer{
+    margin-top: 25px;
+  }
+  &-Card-logo-contianer{
+    margin-bottom: 40px;
+  }
+}

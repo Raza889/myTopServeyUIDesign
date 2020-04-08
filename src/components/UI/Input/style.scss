@@ -1,0 +1,169 @@
+.MTS{
+    &-input-container{
+    // padding: 0 5px;
+    border-radius: 6px;
+    height: auto;
+    position: relative;
+    // overflow: hidden;
+    font-family: inherit;
+    margin-bottom: 24px;
+    width: 100%;
+    &:hover > .MTS-input::placeholder{
+        color: #3D3B52;
+        opacity: 1;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &:hover .img-calender-icon{
+        opacity: 1;
+    }
+    }
+    &-label{
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        top: 34px;
+    }
+    &-input:not(:placeholder-shown) ~ &-label{
+        opacity: 1;
+        top:  4px;    
+        left: 24px;
+        z-index: 9;
+        transition: all .4s;
+        color: #3D3B52;
+        opacity: 0.5;
+        font-size: 12px;
+        line-height: 20px;
+        position: absolute;
+        left: 24px;
+    }
+    &-input{
+        border: none;
+        height:64px;
+        width: calc(100%);
+        padding:0 24px ;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3D3B52;
+        border: 1px solid rgba(61,59,82,.1);
+        border-radius: 6px;
+        &:focus{
+            outline: none;
+            border: 1px solid rgba(61,59,82,.1);
+        }
+        &:focus:valid{
+            border: 1px solid #59CD96;
+            border-radius: 6px;
+        }
+        &:focus:invalid{
+            border: 1px solid #E3556F;
+            border-radius: 6px;
+        }
+        &:focus:invalid ~ .MTS-error-text{
+            position: absolute;
+            opacity: 1;
+            bottom: 0;
+            left: 24px;
+            transition: all .3s;
+        }
+        &::placeholder{
+            color: #3D3B52;
+            opacity: 0.7;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &:disabled{
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+    &-error-text{
+        opacity: 0;
+        height: 0;
+        position: absolute;
+        bottom: 24px;
+        font-size: 12px;
+        line-height: 20px;
+        left: 24px;
+        color: #E3556F;
+        transition: all .3s;
+    }
+}
+
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: #3D3B52;
+    opacity: .8;
+    font-weight: 500 !important;
+}
+.react-calendar__month-view__weekdays
+{
+    // background: 
+    display: none !important;
+}
+.react-calendar__tile--active{
+    background-color: #5C51E1 !important;
+    border-radius: 6px;
+    color:#fff !important;
+    height: 49px;
+    width: 49px;
+    // font-weight: 500 !important;
+}
+
+.react-calendar__month-view__days__day--weekend,
+.react-calendar button{
+    color: #3D3B52 ;
+    font-weight: 700 ;
+}
+.react-calendar button{
+    height: 49px;
+    width: 49px;
+    border-radius: 6px;
+}
+.react-calendar__navigation__label{
+    font-weight: 500 !important;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #5C51E1 !important;
+}
+.react-calendar__navigation__prev2-button
+{
+    display: none;
+}
+.react-calendar__navigation__next2-button
+{
+    display: none;
+}
+.react-calendar__navigation__arrow{
+    font-size: 22px;
+    font-weight: 700;
+    color: #5C51E1 !important;
+}
+.border-none{
+    background: #FFFFFF;
+    border: 1px solid rgba(92, 81, 225, 0.1) !important;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.img-calender-icon{
+    background-image: url('../../../Assets/Images/calender.png');
+    height: 16px;
+    width: 19px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    z-index: 1;
+    opacity: .5;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+}
+.border-none ~ div{
+    background-image: url('../../../Assets/Images/calenderactive.png');
+}

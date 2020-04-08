@@ -1,0 +1,61 @@
+.MTS{
+    &-popup{
+        position: relative;
+        &-background{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(#3D3B52,0.7);
+            z-index: 99;
+            transform-origin: top;
+            &-hide{
+                transform: scaleY(0);
+                transition: all .4s;
+            }
+            &-show{
+                transform: scaleY(1);
+                transition: all .2s;
+            }
+        }
+        &-content{
+            position: fixed;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            top: 50%;
+            transform-origin: top;
+            &-container{
+                max-width: 602px;
+                width: 90vw;
+                margin: auto;
+                height: auto;
+                padding: 40px 20px;
+                background-color:#fff;
+                border-radius: 8px;
+                position: relative;
+            }
+            &-show{
+                transition: all .4s .2s;
+                transform: translate(-50%,-50%) scaleY(1);
+            }
+            &-hide{
+                transition: all .2s;
+                transform: translate(-50%,-50%) scaleY(0);
+            }
+
+        }
+        &-cross-icon{
+            position: absolute;
+            right: -40px;
+            cursor: pointer;  
+            @media only screen and (max-width:576px) {
+                right:0px;
+                top: -40px;
+            }  
+        }
+    }
+}

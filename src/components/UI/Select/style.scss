@@ -1,0 +1,27 @@
+.MTS-select{
+    appearance: none;
+    background-color: transparent;
+    &:focus:valid{
+        border: 2px solid rgba(61, 59, 82, 0.2);
+    }
+    &:focus{
+        border: 2px solid rgba(61, 59, 82, 0.2);
+    }
+    &:focus{
+        & ~ .MTS-select-symbol{
+            transform: rotateX(180deg);
+        }
+    }
+    &:hover{
+        border: 1px solid rgba(61, 59, 82, 0.2);
+    }
+}
+.MTS-select-symbol{
+    position: absolute;
+    right: 20px;
+    top:24px;   
+    opacity: .7;
+    & img{
+        height: 12px;
+    }
+}

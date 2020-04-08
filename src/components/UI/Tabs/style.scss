@@ -1,0 +1,118 @@
+@import '../../../commonStyle/variables.scss';
+.MTS{
+    &-custom-tab-container{
+        display: flex;
+        // width: 100%;
+        background-color: #F6F5FE;
+        border-radius: 6px;
+        padding: 5px;
+        height: 64px;
+    }
+    &-tab-right,
+    &-tab-left{
+        flex: 1;
+        // min-width: 200px;
+        height: 64px;
+        color:$color-blue-primary;
+        & label{
+            height: calc(100% - 10px);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            position: relative;
+            
+        }
+        .MTS-input-radio{
+            display: none;
+        }
+        .MTS-input-radio:checked ~ label{
+            background-color: $color-blue-primary;
+            color:#fff;
+           &::after{
+                border-color: #fff;
+           }
+           &::before{
+                background-color: #fff;
+           }
+          
+        }
+        .MTS-input-radio:checked ~ .MTS-checkbox{
+            &::after{
+            // border:solid $color-blue-primary;
+            border-color: $color-blue-primary;
+        }
+    }
+
+    }
+}
+.MTS-multiple::before{
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color: $color-blue-primary;
+    display: block;
+    content: '';
+    position: absolute;
+    left: calc(25% + 5px); 
+    @media only screen and (max-width:900px) and (min-width:768px){
+        left: calc(15% + 5px);
+    }
+    @media only screen and (max-width:576px){
+        left: calc(8% + 5px);
+    }  
+}
+.MTS-multiple::after{
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    border:3px solid $color-blue-primary;
+    display: block;
+    content: '';   
+    position: absolute;
+    left: calc(25%);
+    @media only screen and (max-width:900px) and (min-width:768px){
+        left: calc(15%);
+    }
+    @media only screen and (max-width:576px){
+        left: calc(8%);
+    }
+}
+.MTS-checkbox::before{
+    height: 24px;
+    width: 24px;
+    display: block;
+    content: '';
+    background-color: $color-blue-primary;
+    border-radius: 6px;
+    left: calc(18%);
+    position: absolute;
+    @media only screen and (max-width:900px) and (min-width:768px){
+        left: calc(10%);
+    }
+    @media only screen and (max-width:576px){
+        left: calc(8%);
+    }
+}
+.MTS-checkbox::after{
+    width: 7px;
+    height: 15px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);        
+    position: absolute;
+    left: calc(18% + 9px);
+    display: block;
+    top: 18px;
+    content: '';
+    z-index: 9;
+    @media only screen and (max-width:900px) and (min-width:768px){
+        left: calc(10% + 9px);
+    }
+    @media only screen and (max-width:576px){
+        left: calc(8% + 9px);
+    }
+}

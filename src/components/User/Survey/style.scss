@@ -1,0 +1,122 @@
+.MTS-survey-top{
+    color: #3D3B52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width:576px){
+        align-items: flex-start;
+    }
+}
+.MTS-survey-reward{
+    & > span{
+        color: #46E79B;
+    }
+}
+.MTS{
+    &-survey-progress{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &-question-fill{
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 27px;
+        color: #3D3B52;
+    }
+    &-survay-form-quetion-outter-container{
+        background-color: #fff;
+        padding: 20px 40px;
+        margin-top: 30px;
+        border-radius: 16px;
+    }
+    &-survay-form-question-container{
+        border-bottom: 1px solid rgba($color: #3D3B52, $alpha: .1);
+        margin: 24px 0;
+        padding-bottom: 32px;
+        &:last-child{
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    &-survay-form-question{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3D3B52;
+        margin-bottom: 20px;
+    }
+    &-survay-form-option{
+        margin: 14px 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &-survey-form-footer-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0px -6px 20px rgba(61, 59, 82, 0.05);
+        padding: 20px;
+        margin-top: 30px;
+        & button{
+            width: max-content;
+        }
+        @media only screen and (max-width:576px){
+            flex-direction: row-reverse;
+            & > .MTSoutline{
+                border: none;
+                font-size: 12px;
+                // white-space: nowrap;
+                padding: 0;
+            }
+        }
+    }
+    &-Page-container-padding-0{
+        padding: 0;
+    }
+    &-page-body-container-padding-16{
+        padding: 16px;
+    }
+    &-survey-logo-container{
+        @media only screen and (max-width:576px){
+            display: none;
+        }
+    }
+    &-survey-title{
+        font-weight: normal;
+    }
+    &-sucess-page{
+        width: 90vw;
+        margin: auto;
+        margin-top: 60px;
+        max-width: 604px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 16px;
+        padding-top: 83px;
+
+    }
+    &-success-survey-button-row{
+        margin-top: 32px;
+        display: flex;
+        & button{
+            width: max-content;
+            &:first-child{
+                margin-right: 16px;
+            }
+        }
+        @media only screen and (max-width:576px){
+            flex-wrap: wrap;
+            & button{
+                width: 100%;
+                &:first-child{
+                    margin-bottom: 16px;
+                    margin-right: 0;
+                }
+            }
+        }
+      
+    }
+}

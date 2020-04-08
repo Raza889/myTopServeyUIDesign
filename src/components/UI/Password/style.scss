@@ -1,0 +1,120 @@
+.MTS-password{
+    &-input-container{
+    border-radius: 6px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+    margin-bottom: 16px;
+    &:hover > .MTS-input::placeholder{
+        color: #3D3B52;
+        opacity: 1;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    }
+    &-label{
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        top: 34px;
+    }
+    &-input:not(:placeholder-shown) ~ &-label{
+        opacity: 1;
+        top:  4px;    
+        left: 24px;
+        z-index: 9;
+        transition: all .4s;
+        color: #3D3B52;
+        opacity: 0.5;
+        font-size: 12px;
+        line-height: 20px;
+        position: absolute;
+        left: 24px;
+    }
+    &-input{
+        border: none;
+        height:64px;
+        width: calc(100%);
+        padding:0 24px ;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3D3B52;
+        border: 1px solid rgba(61,59,82,.1);
+        border-radius: 6px;
+        &:focus{
+            outline: none;
+            border: 1px solid rgba(61,59,82,.1);
+        }
+        &::placeholder{
+            color: #3D3B52;
+            opacity: 0.7;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &:disabled{
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+    &-strength{
+        height: 10px;
+        background-color: transparent;
+        width: 100%;
+        margin-top: -7px;
+    }
+    &-basic{
+        background-color: #E3556F;
+        width: 25%;
+    }
+    &-low{
+        background-color: #ED9251;
+        width: 50%;
+    }
+    &-medium{
+        background-color: #59CD96;
+        width: 75%;
+    }
+    &-high{
+        background-color: #59CD96;
+        width: calc(100%);
+        border-bottom-right-radius: 6px;
+    }
+    &-hide{
+        position: absolute;
+        height: 64px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        right: 24px;
+        top: 0;
+        z-index: 9;
+        opacity: .7;
+        background-image: url('../../../Assets/Images/eyeclose.png'); 
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }  
+    }
+    &-show{
+        position: absolute;
+        height: 64px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        right: 24px;
+        top: 0;
+        z-index: 9;
+        opacity: 1;
+        background-image: url('../../../Assets/Images/openeye.png'); 
+        cursor: pointer;
+        &:hover{
+        background-image: url('../../../Assets/Images/openhover.png'); 
+        }  
+    }
+}

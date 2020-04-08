@@ -1,0 +1,70 @@
+@import './variables.scss';
+h1,
+.MTS-heading-1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    color:inherit;
+}
+h3,
+.MTS-heading-3{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: inherit;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+    font-feature-settings: 'ordn' on, 'liga' off;
+    &-bold{
+        font-weight: 700;
+    }
+}
+h4,
+.MTS-heading-4{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    color: inherit;
+    &-bold{
+        font-weight: bold;
+    }
+}
+h2,
+.MTS-heading-2{
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    color: #3D3B52;
+    &-bold{
+        font-weight: 700;
+    }
+}
+h6,
+.MTS-heading-6{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: inherit;
+}
+.MTS-link{
+    color:$color-blue-primary;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($color-blue-dark,.3);
+    &:visited,
+    &:link{
+        color:$color-blue-primary;
+        text-decoration: none;
+    }
+    &-md{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &-bold{
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,156 @@
+@import '../../../commonStyle/variables.scss';
+
+.MTS-Login{
+    &-remember-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #3D3B52;
+    }
+    &-button{
+        width: 48%;
+        @media only screen and (max-width:500px) {
+            width: 100%;
+            &:last-child{
+                margin-top: 24px;
+            }
+        }
+    }
+    &-button-row{
+        display: flex;
+        margin-top: 24px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+}
+
+.remember-me{
+    margin-left: 10px;
+}
+
+
+@media (max-width:576px) {
+    .password-container{
+        align-self: flex-end;
+        width: 100%;
+    }
+    .resetpassword-btn{
+        align-self: flex-end;
+        width: 100%;
+    }
+}
+.back-to-login{
+    &,
+    &:visited,
+    &:link{
+        color: #3D3B52;
+        opacity: 0.7;
+        margin-left: 5px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(#3D3B52,.3);
+    }    
+}
+.forget-password-footer-text{
+    font-size: 16px;
+    line-height: 158.5%;
+    color: #3D3B52;
+    opacity: 0.7;
+}
+.password-heading{
+    color: #3D3B52;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.MTS{
+    &-tab-container{
+        background: #3D3B52;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-tab{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        color: #fff;
+        justify-content: center;
+        &-disabled{
+            opacity: .7;
+        }
+        &:first-child{
+            justify-content: flex-end;
+        }
+        &:last-child{
+            justify-content: flex-start;
+        }
+    }
+      
+    &-input-row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+}
+.tab-number{
+    width: 30px;
+    height: 30px;
+    background: #5C51E1;
+    color: #F6F5FE;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 10px;
+    &-inactive{
+        background-color: #4f4d63;
+    }
+    &-filled{
+        background-color: #59CD96;
+    }
+}  
+.right-input{
+    width: 49%;
+    @media only screen and (max-width:568px) {
+        width: 100%;
+    }
+}
+.tabs-gender-container{
+    display: flex;
+    width: 100%;
+    padding: 7px;
+    border-radius: 8px;
+    background: rgba(#5C51E1,.1);
+    height: 64px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.tab-gender{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-blue-primary;
+    transition: all .4s;
+    &-selected{
+        background: #5C51E1;
+        border-radius: 4px;
+        color: #fff;
+        transition: all .4s;
+    }
+}
+.info-text{
+    color: #3D3B52;
+    opacity: 0.7;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

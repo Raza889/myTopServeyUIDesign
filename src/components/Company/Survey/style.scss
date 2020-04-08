@@ -1,0 +1,167 @@
+@import '../../../commonStyle/variables.scss';
+.MTS{
+  &-create-survey-page-container{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px;
+    @media only screen and (max-width:768px){
+      padding: 10px;
+    }
+  }
+  &-create-img{
+    height: 200px;
+  }
+  &-created{
+    &-model-width{
+      max-width: 770px;
+      padding: 40px;
+    }
+    &-row{
+      display: flex;
+      justify-content: space-between;
+    }
+    &-text{
+      font-size: 16px;
+      line-height: 24px;
+      color: #3D3B52;
+      margin-bottom: 40px;
+      margin-top: 8px;
+
+    }
+    &-heading{
+      margin-top: 40px;
+    }
+    &-add-company-info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba($color-blue-primary,.1);
+      border-radius: 8px;
+      padding: 10px 24px;
+      color: $color-blue-dark;
+      margin-top: 10px;
+      &-disabled{
+        opacity: .6;
+      }
+      &-success{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3FBA80;
+        border-radius: 8px;
+        // padding: 10px 24px;
+        color: #fff;
+        margin-top: 10px;
+      }
+      &-payment-success{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #D88142;
+        border-radius: 8px;
+        // padding: 10px 24px;
+        color: #fff;
+        margin-top: 10px;
+      }
+    }
+    &-btn-container-success{
+      width: 80px;
+      padding: 10px 24px;
+    }
+    &-svg-container{
+      display: flex;
+      flex: 1;
+      align-items: center;
+      & svg{
+        margin-right: 20px;
+      }
+      &-success{
+        flex: 1;
+        background-color: #59CD96;
+        border-radius: 8px;
+        padding: 10px 24px;
+      }
+      &-payment-success{
+        flex: 1;
+        background-color: #ED9251;
+        border-radius: 8px;
+        padding: 10px 24px;
+        color: #fff;
+      }
+    }
+    &-logo{
+      height: 64px;
+      border: 1px solid rgba(61, 59, 82, 0.1);
+      width: 100%;
+      display: flex;
+      border-radius: 16px;
+      padding: 0 24px;
+      align-items: center;
+      color: #3D3B52;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      &-text{
+        color: rgba(#3D3B52,.5);
+
+      }
+    }
+    &-upload-button{
+      color: $color-blue-primary;
+      border: 2px solid rgba($color-blue-primary,.1);
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+    &-payment-container{
+      display: flex;
+      align-items: flex-start;
+    }
+    &-payment-right,
+    &-payment-left{
+      flex: 0 0 50%;
+      width: 50%;
+    }
+    &-payment-right{
+      display: flex;
+      background-color: rgba($color-blue-primary,.1);
+      padding: 24px;
+      border-radius: 6px;
+    }
+    &-payment-symbol{
+      width: 40px;
+    }
+    &-payment-text{
+      flex: 1;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #5C51E1;
+    }
+    &-payment-heading{
+      margin-bottom: 24px;
+    }
+    &-payment-attr-name{
+      font-size: 14px;
+      line-height: 20px;
+      color: #3D3B52;
+      opacity: 0.7;
+    }
+    &-payment-attr-value{
+      font-size: 16px;
+      line-height: 24px;
+      color: #3D3B52;
+      margin-bottom: 19px;
+    }
+  }
+  &-only-svg{
+    font-size: 14px;
+    line-height: 20px;
+    color: #3D3B52;
+    opacity: 0.5;
+    margin-bottom: 14px;
+    text-transform: capitalize;
+  }
+  &-add-company-header{
+    margin-bottom: 17px;
+  }
+}
+

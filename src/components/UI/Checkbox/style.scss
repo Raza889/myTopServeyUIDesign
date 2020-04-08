@@ -1,0 +1,195 @@
+
+@import 'commonStyle/variables.scss';
+.MTS{
+    &-container{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &-styled{
+        display: flex;
+        align-items: center;}
+
+    &-remember{
+        margin-left: 16px;
+        color: $color-text;
+    }
+
+    &-checked-text{
+        color: $color-blue-primary;
+    }
+
+    &-icon{
+        height: 32px;
+        width: 32px;
+    }
+    //checkbox start
+    &-checkbox-container{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &:hover > .MTS-checkbox-box::after{
+            display: block;
+            content: '';
+            opacity: .6;
+        }
+        &:hover > .MTS-radio-button::after{
+            display: block;
+            content: '';
+            opacity: .6;
+        }
+        & .MTS-input-hidden:disabled ~ .MTS-checkbox-box{
+            opacity: .6;
+            cursor: not-allowed;
+        }
+        &:hover > .MTS-input-hidden:disabled ~ .MTS-checkbox-box{
+            background-color:rgba(#3D3B52,.3);
+            opacity: 0.3;;
+        }
+        & > .MTS-input-hidden:disabled ~ .MTS-checkbox-label{
+            color:rgba(#3D3B52,.3);
+            opacity: 0.3;;
+        }
+        
+        &:hover > .MTS-input-hidden:checked ~ .MTS-checkbox-box::after {
+            display: block;
+            content: '';
+            opacity: 1;
+        } 
+        &:hover > .MTS-input-hidden:checked ~ .MTS-radio-button::after {
+            display: block;
+            content: '';
+            opacity: 1;
+        } 
+        &:hover > .MTS-checkbox-box{
+            background-color: $color-blue-primary; 
+            opacity: .6;  
+        }
+        &:hover > .MTS-radio-button{
+            // background-color: $color-blue-primary; 
+            opacity: .6;  
+        }
+        &:hover > .MTS-input-hidden ~ .MTS-checkbox-box {
+            background-color: $color-blue-primary; 
+            opacity: .6;  
+            color: #3D3B52;
+            font-size: 16px;
+        }
+        &:hover > .MTS-input-hidden ~ .MTS-radio-button {
+            // background-color: $color-blue-primary; 
+            opacity: .6;  
+            color: #3D3B52;
+            font-size: 16px;
+        }
+        &:hover > .MTS-input-hidden:checked ~ .MTS-checkbox-box {
+            background-color: $color-blue-dark; 
+            opacity: 1;  
+        }
+        &:hover > .MTS-input-hidden:checked ~ .MTS-radio-button {
+            border:2px solid $color-blue-dark; 
+            opacity: 1;  
+        }
+        & .MTS-input-hidden:checked ~ .MTS-checkbox-label {
+            color: $color-blue-primary; 
+        }
+        & .MTS-input-hidden ~ .MTS-checkbox-label {
+            color: #3D3B52; 
+        }
+        &:hover > .MTS-input-hidden:checked ~ .MTS-checkbox-label {
+            color: $color-blue-dark; 
+        }
+    }
+    
+    &-checkbox-box{
+        height: 32px;
+        width: 32px;
+        border: 2px solid rgba(#3D3B52,.2);
+        border-radius: 6px;   
+        position: relative; 
+        // background-color: $color-blue-primary;
+        &::after{
+            width: 9px;
+            height: 17px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);        
+            position: absolute;
+            left: 9px;
+            top: 3px;
+        }
+        .MTS-input-hidden:checked ~ &::after {
+            display: block;
+            content: '';
+        }
+        .MTS-input-hidden:checked ~ &{
+            background-color: $color-blue-primary;   
+        }
+        
+    }
+    &-checkbox-label{
+        font-size: 16px;
+        margin-left: 16px;
+    }
+    &-input-hidden{
+        display: none;
+    }
+    //end
+    &-radio-button{
+        border-radius: 100px;
+        height: 32px;
+        width: 32px;
+        border: 2px solid rgba(#3D3B52,.2);
+        position: relative;
+    &::after{
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        background-color: $color-blue-primary;
+        position: absolute;
+        left: 4px;
+        top: 4px;   
+    }
+    .MTS-input-hidden:checked ~ &::after {
+        display: block;
+        content: '';
+    }
+    .MTS-input-hidden:checked ~ &{
+        background-color: transparent;
+        border: 2px solid $color-blue-primary;   
+    }
+    }
+    &-switch-box{
+        background-color: #ACABBA;
+        height: 20px;
+        width: 36px;
+        border-radius: 24px;
+        position: relative;
+        transition: all .3s;
+
+        &::after{
+            content: '';
+            height: 16px;
+            width: 16px;
+            background-color: #fff;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            display: inline-block;
+            border-radius: 100px;
+            transition:all .5s;
+        }
+    .MTS-input-hidden:checked ~ &{
+        background-color: #3FE7BE;
+        transition: all .3s;
+
+        }
+    .MTS-input-hidden:checked ~ &::after{
+           transform: translateX(18px);
+            left: auto;
+            transition: all .5s;
+    }
+    }
+    
+
+}

@@ -1,0 +1,68 @@
+@import '../../../commonStyle/variables.scss';
+.MTS-company-page-photo-container{
+    width: 180px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img{
+        width: 100%;
+    }
+    & > button{
+        width: max-content;
+        margin-top: 75px;
+        margin-left: -25px;
+        box-shadow: 0 10px 10px 0px rgba($color: #000000, $alpha: .20);
+    }
+}
+.MTS-survey-card-company{
+    padding-bottom: 24px;
+}
+.MTS{
+    &-heading-survey{
+        & span{
+            height: 24px;
+            width: 34px;
+            border-radius: 10px;
+            margin-left: 5px;
+            color: #fff;
+            font-size: 16px;
+            padding: 3px 10px;
+            font-weight: 500;
+        }       
+    }
+    &-heading-survey-active{
+        & span {
+            background-color: $color-blue-dark;
+        }
+    }
+    &-heading-survey-completed{
+        & span{
+            background-color: #59CD96;
+        }
+    }
+    &-heading-survey-inactive{
+        & span{
+            background-color: #E3556F;
+        }
+    }
+    &-card-waiting{
+        background-color: #E3556F;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 0 16px 0 16px;
+        position: absolute;
+        right: 0;
+        padding: 5px 10px;
+    }
+    &-card-default-img{
+        height: 145px !important;
+        width: 104px !important;
+    }
+    &-card-header-default{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
